@@ -65,6 +65,7 @@ export async function getGithubRepoPullRequestData(req, res = undefined) {
                     obj.author = author;
                 }
 
+                // Get commits from NASA apod-api
                 let commitResponse = await axios.get(commitsUrl);
                 if (commitResponse.hasOwnProperty('data')) {
                     commits = commitResponse.data.length;
