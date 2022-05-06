@@ -43,7 +43,17 @@ export async function getGithubRepoPullRequestData(req, res = undefined) {
         let pullResponse = await axios.get(`https://api.github.com/repos/${ownerName}/${repoName}/pulls`);
 
         if (pullResponse.data) {
-            
+            for(let x = 0; x < pullResponse.data.length; x++) {
+                let id = pullResponse.data[x].id;
+                let number = pullResponse.data[x].number;
+                let title = pullResponse.data[x].title;
+                let author = '';
+                let commits = '';
+                let userId = pullResponse.data[x].user.login;
+                let commitsUrl = pullResponse.data[x].commits_url;
+
+                
+            }
         }
 
     }
