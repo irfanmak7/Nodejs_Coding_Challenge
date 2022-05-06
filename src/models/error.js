@@ -26,3 +26,15 @@ export class Info {
         }
     }
 }
+
+export class Response {
+    constructor(data, error, info = undefined) {
+        if (info === undefined) {
+            this.info = new Info();
+        } else {
+            this.info = new Info(info);
+        }
+        this.data = data;
+        this.error = error;
+    }
+}
