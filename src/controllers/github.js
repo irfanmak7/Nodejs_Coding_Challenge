@@ -52,7 +52,11 @@ export async function getGithubRepoPullRequestData(req, res = undefined) {
                 let userId = pullResponse.data[x].user.login;
                 let commitsUrl = pullResponse.data[x].commits_url;
 
-                
+                let obj = {
+                    "id": id,
+                    "number": number,
+                    "title": title,
+                };
             }
         }
 
