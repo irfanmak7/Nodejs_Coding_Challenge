@@ -64,6 +64,12 @@ export async function getGithubRepoPullRequestData(req, res = undefined) {
                     author = userResponse.data.name;
                     obj.author = author;
                 }
+
+                let commitResponse = await axios.get(commitsUrl);
+                if (commitResponse.hasOwnProperty('data')) {
+                    commits = commitResponse.data.length;
+                    obj.commit_count  = commits;
+                }
             }
         }
 
