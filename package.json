@@ -1,0 +1,11 @@
+{
+  "name": "nodejs_coding_challenge",
+  "version": "1.0.0",
+  "description": "API that returns information about open pull requests from a github repository",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Irfan Maknojia",
+  "license": "ISC"
+}
