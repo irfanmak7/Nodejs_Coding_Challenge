@@ -75,4 +75,5 @@ export async function getGithubRepoPullRequestData(req, res = undefined) {
             }
         }
     }
+    return new Promise(resolve => { resolve(array); });
 }
