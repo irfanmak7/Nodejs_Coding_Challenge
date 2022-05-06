@@ -42,5 +42,9 @@ export async function getGithubRepoPullRequestData(req, res = undefined) {
         // Get pull requests from NASA apod-api
         let pullResponse = await axios.get(`https://api.github.com/repos/${ownerName}/${repoName}/pulls`);
 
+        if (pullResponse.data) {
+            
+        }
+
     }
 }
