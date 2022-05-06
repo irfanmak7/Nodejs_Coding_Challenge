@@ -70,8 +70,9 @@ export async function getGithubRepoPullRequestData(req, res = undefined) {
                     commits = commitResponse.data.length;
                     obj.commit_count  = commits;
                 }
+
+                array.push(obj);
             }
         }
-
     }
 }
