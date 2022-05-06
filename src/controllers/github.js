@@ -57,6 +57,13 @@ export async function getGithubRepoPullRequestData(req, res = undefined) {
                     "number": number,
                     "title": title,
                 };
+
+                // Get author name from NASA apod-api
+                let userResponse = await axios.get(`https://api.github.com/users/${userId}`);
+                if (userResponse.hasOwnProperty('data')) {
+                    author = userResponse.data.name;
+                    obj.author = author;
+                }
             }
         }
 
