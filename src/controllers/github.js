@@ -37,4 +37,10 @@ export async function getGithubRepoPullRequestData(req, res = undefined) {
             response = new Response('', new Error('Error checking repo name', 400));
         }
     }
+
+    if (response.error.code === 0) {
+        // Get pull requests from NASA apod-api
+        let pullResponse = await axios.get(`https://api.github.com/repos/${ownerName}/${repoName}/pulls`);
+
+    }
 }
