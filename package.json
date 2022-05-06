@@ -4,7 +4,7 @@
   "description": "API that returns information about open pull requests from a github repository",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon ./src/index.js --exec babel-node -e js"
   },
   "keywords": [],
